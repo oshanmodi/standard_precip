@@ -213,7 +213,7 @@ class BaseStandardIndex():
             if freq == "D":
                 self._df_copy[self.freq_col] = self._df_copy[date_col].dt.dayofyear
             elif freq == "W":
-                self._df_copy[self.freq_col] = self._df_copy[date_col].dt.week
+                self._df_copy[self.freq_col] = self._df_copy[date_col].dt.isocalendar().week
             elif freq == "M":
                 self._df_copy[self.freq_col] = self._df_copy[date_col].dt.month
             else:
